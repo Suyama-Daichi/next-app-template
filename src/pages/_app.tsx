@@ -1,6 +1,10 @@
-import '@/styles/globals.css'
-import type { AppProps } from 'next/app'
+import { MuiTheme } from "@/modules/MuiTheme";
+import type { AppProps } from "next/app";
 
 export default function App({ Component, pageProps }: AppProps) {
-  return <Component {...pageProps} />
+  return (
+    <MuiTheme variant="light">
+      <Component {...pageProps} />
+    </MuiTheme>
+  );
 }
