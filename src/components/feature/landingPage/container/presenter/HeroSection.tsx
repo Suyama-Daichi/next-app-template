@@ -3,9 +3,9 @@ import {
   Button,
   Unstable_Grid2 as Grid2,
   Typography,
-} from "@mui/material";
+} from '@mui/material';
 
-import { COLOR } from "@/common/constants";
+import { COLOR } from '@/common/constants';
 
 type Props = {
   logo: string;
@@ -20,12 +20,12 @@ export const HeroSection = ({ logo, title, description, imageUrl }: Props) => {
       <Grid2
         xs={5}
         xsOffset={1}
-        display={"flex"}
-        flexDirection={"column"}
-        justifyContent={"center"}
+        display={'flex'}
+        flexDirection={'column'}
+        justifyContent={'center'}
         rowGap={2}
       >
-        <Grid2 display={"flex"} flexDirection={"column"}>
+        <Grid2 display={'flex'} flexDirection={'column'}>
           <Box mb={4}>
             <img src={logo} />
           </Box>
@@ -39,14 +39,14 @@ export const HeroSection = ({ logo, title, description, imageUrl }: Props) => {
           ))}
         </Grid2>
         <Grid2 container gap={2}>
-          <Button href={"/login"}>ログイン</Button>
-          <Button variant="outlined" href={"/dashboard"}>
+          <Button href={'/login'}>ログイン</Button>
+          <Button variant="outlined" href={'/dashboard'}>
             お問い合せ
           </Button>
         </Grid2>
       </Grid2>
       <Grid2 xs={6}>
-        <img width={"100%"} height={"auto"} src={imageUrl} alt="Hero Image" />
+        <img width={'100%'} height={'auto'} src={imageUrl} alt="Hero Image" />
       </Grid2>
     </Grid2>
   );

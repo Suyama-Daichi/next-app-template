@@ -1,9 +1,6 @@
-import { Inter } from "next/font/google";
-import { LandingPageContainer } from "@/components/feature/landingPage/container/LandingPage.container";
-import { Head } from "@/components/shared/Head";
-import { APP_META_DATA } from "@/common/constants";
-
-const inter = Inter({ subsets: ["latin"] });
+import { APP_META_DATA } from '@/common/constants';
+import { LandingPageContainer } from '@/components/feature/landingPage/container/LandingPage.container';
+import { Head } from '@/components/shared/Head';
 
 export default function Home() {
   return (

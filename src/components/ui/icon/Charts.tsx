@@ -1,16 +1,16 @@
-import { Box } from "@mui/material";
-import { BoxProps } from "@mui/system";
+import { Box } from '@mui/material';
+import { BoxProps } from '@mui/system';
 
-import { COLOR } from "@/common/constants";
-import { SvgIcon, type SvgIconProps } from "@/components/ui/icon/SvgIcon";
+import { COLOR } from '@/common/constants';
+import { SvgIcon, type SvgIconProps } from '@/components/ui/icon/SvgIcon';
 
 export const Charts = ({
   color = COLOR.background,
   size,
   m,
-}: SvgIconProps & { m?: BoxProps["m"] }) => {
+}: SvgIconProps & { m?: BoxProps['m'] }) => {
   return (
-    <Box m={m} display={"flex"} alignItems={"center"}>
+    <Box m={m} display={'flex'} alignItems={'center'}>
       <SvgIcon color={color} size={size}>
         <svg
           width={size}

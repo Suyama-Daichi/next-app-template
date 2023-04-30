@@ -1,5 +1,6 @@
-import { MuiTheme } from "@/modules/MuiTheme";
-import type { AppProps } from "next/app";
+import type { AppProps } from 'next/app';
+
+import { MuiTheme } from '@/modules/MuiTheme';
 
 export default function App({ Component, pageProps }: AppProps) {
   return (

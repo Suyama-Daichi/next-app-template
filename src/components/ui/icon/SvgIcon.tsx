@@ -1,6 +1,6 @@
-import { SvgIcon as MuiSvgIcon } from "@mui/material";
+import { SvgIcon as MuiSvgIcon } from '@mui/material';
 
-import { COLOR } from "@/common/constants";
+import { COLOR } from '@/common/constants';
 
 export type SvgIconProps = {
   color?: string;
