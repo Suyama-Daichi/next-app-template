@@ -1,4 +1,10 @@
 module.exports = {
+  root: true,
+  settings: {
+    react: {
+      version: 'detect',
+    },
+  },
   ignorePatterns: ['next-env.d.ts'],
   plugins: ['@typescript-eslint', 'autofix'],
   parserOptions: {
@@ -9,9 +15,13 @@ module.exports = {
   },
   extends: [
     'next/core-web-vitals',
+    'eslint:recommended',
     'plugin:import/recommended',
     'plugin:import/warnings',
     'plugin:@typescript-eslint/recommended',
+    'plugin:react/recommended',
+    'plugin:react-hooks/recommended',
+    'plugin:react/jsx-runtime',
     'prettier',
   ],
   rules: {
