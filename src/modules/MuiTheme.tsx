@@ -1,6 +1,6 @@
-import React, {  ReactNode } from 'react';
+import { ReactNode } from 'react';
 
-import { CssBaseline , PaletteMode } from '@mui/material';
+import { CssBaseline, PaletteMode } from '@mui/material';
 import { createTheme, ThemeProvider } from '@mui/material/styles';
 
 import { COLOR } from '@/common/constants';
@@ -18,10 +18,7 @@ export const MuiTheme = ({ children, variant = 'light' }: Props) => {
       text: {
         primary: variant === 'light' ? '#444' : '#ccc',
       },
-      background:
-        variant === 'light'
-          ? { default: COLOR.blue_bg }
-          : { default: COLOR.black },
+      background: variant === 'light' ? { default: COLOR.blue_bg } : { default: COLOR.black },
     },
   });
 

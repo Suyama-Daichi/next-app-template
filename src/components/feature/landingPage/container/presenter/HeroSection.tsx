@@ -1,9 +1,4 @@
-import {
-  Box,
-  Button,
-  Unstable_Grid2 as Grid2,
-  Typography,
-} from '@mui/material';
+import { Box, Button, Unstable_Grid2 as Grid2, Typography } from '@mui/material';
 
 import { COLOR } from '@/common/constants';
 
@@ -14,17 +9,9 @@ type Props = {
   imageUrl: string;
 };
 export const HeroSection = ({ logo, title, description, imageUrl }: Props) => {
-  console.log(description);
   return (
     <Grid2 container sx={{ backgroundColor: COLOR.white }}>
-      <Grid2
-        xs={5}
-        xsOffset={1}
-        display={'flex'}
-        flexDirection={'column'}
-        justifyContent={'center'}
-        rowGap={2}
-      >
+      <Grid2 xs={5} xsOffset={1} display={'flex'} flexDirection={'column'} justifyContent={'center'} rowGap={2}>
         <Grid2 display={'flex'} flexDirection={'column'}>
           <Box mb={4}>
             <img src={logo} />
