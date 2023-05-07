@@ -21,3 +21,9 @@ export const COLOR = {
   blue_bg: '#F5F9FE',
   black: '#333333',
 } as const satisfies { [key: string]: `#${string}` };
+
+export const FORM_ERROR_MESSAGE = {
+  INVALID_EMAIL: 'メールの形式で入力してください',
+  INVALID_PASSWORD: 'パスワードは半角英数大文字小文字を含む8文字以上で入力してください',
+  REQUIRED: '入力してください',
+};

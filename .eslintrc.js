@@ -49,7 +49,7 @@ module.exports = {
         'newlines-between': 'always',
       },
     ],
-    quotes: ['error', 'single'],
+    quotes: ['error', 'single', { avoidEscape: true }],
     '@typescript-eslint/no-unsafe-argument': 'warn',
     '@typescript-eslint/no-unused-vars': 'off', // autofix/no-unused-varsとの干渉防止
     'autofix/no-unused-vars': 'error',
