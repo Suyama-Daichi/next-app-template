@@ -1,9 +1,11 @@
-import { Button, Typography } from '@mui/material';
+import { Button } from '@mui/material';
 import Box from '@mui/material/Box';
 import Container from '@mui/material/Container';
 import Grid from '@mui/material/Grid';
 import { Theme } from '@mui/material/styles';
 import { SxProps } from '@mui/system';
+
+import { Typography } from '@/components/ui/Typography';
 
 const item: SxProps<Theme> = {
   display: 'flex',
@@ -47,7 +49,7 @@ function ProductHowItWorks() {
             opacity: 0.7,
           }}
         />
-        <Typography variant="h4" sx={{ mb: 4 }}>
+        <Typography variant="h4" marked="center" sx={{ mb: 4 }}>
           How it works
         </Typography>
         <Grid container rowSpacing={5}>

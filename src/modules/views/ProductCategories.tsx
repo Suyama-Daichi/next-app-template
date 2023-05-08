@@ -1,8 +1,9 @@
-import { Typography } from '@mui/material';
 import Box from '@mui/material/Box';
 import ButtonBase from '@mui/material/ButtonBase';
 import Container from '@mui/material/Container';
 import { styled } from '@mui/material/styles';
+
+import { Typography } from '@/components/ui/Typography';
 
 const ImageBackdrop = styled('div')(({ theme }) => ({
   position: 'absolute',
@@ -103,7 +104,7 @@ const images = [
 export default function ProductCategories() {
   return (
     <Container component="section" sx={{ my: 4 }}>
-      <Typography variant="h4" align="center">
+      <Typography variant="h4" marked="center" align="center">
         For all tastes and all desires
       </Typography>
       <Box sx={{ mt: 4, display: 'flex', flexWrap: 'wrap' }}>
@@ -140,7 +141,7 @@ export default function ProductCategories() {
                 color: 'common.white',
               }}
             >
-              <Typography component="h3" variant="h6" color="inherit" className="imageTitle">
+              <Typography variant="h6" color="inherit" className="imageTitle">
                 {image.title}
                 <div className="imageMarked" />
               </Typography>
