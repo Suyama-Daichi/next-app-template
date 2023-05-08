@@ -4,7 +4,7 @@ import Box from '@mui/material/Box';
 import Container from '@mui/material/Container';
 
 import AppAppBar from '@/components/shared/AppAppBar';
-import { Head } from '@/components/shared/Head';
+import Head from '@/components/shared/Head';
 import Markdown from '@/components/ui/Markdown';
 import Typography from '@/components/ui/Typography';
 import Footer from '@/components/ui/footer/Footer';
