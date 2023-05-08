@@ -1,7 +1,13 @@
 import { SignupContainer } from '@/components/Signup';
+import Head from '@/components/shared/Head';
 
 const Signup = () => {
-  return <SignupContainer />;
+  return (
+    <>
+      <Head />
+      <SignupContainer />;
+    </>
+  );
 };
 
 export default Signup;

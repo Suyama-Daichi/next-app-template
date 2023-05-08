@@ -1,7 +1,13 @@
 import { ForgotPasswordContainer } from '@/components/ForgotPassword';
+import Head from '@/components/shared/Head';
 
 const ForgotPassword = () => {
-  return <ForgotPasswordContainer />;
+  return (
+    <>
+      <Head title="パスワード再設定" />
+      <ForgotPasswordContainer />;
+    </>
+  );
 };
 
 export default ForgotPassword;

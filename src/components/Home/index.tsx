@@ -1,5 +1,3 @@
-import React from 'react';
-
 import ProductCTA from '@/components/Home/elements/ProductCTA';
 import ProductCategories from '@/components/Home/elements/ProductCategories';
 import ProductHero from '@/components/Home/elements/ProductHero';
@@ -12,7 +10,7 @@ import withRoot from '@/modules/withRoot';
 
 const Index = () => {
   return (
-    <React.Fragment>
+    <>
       <AppAppBar />
       <ProductHero />
       <ProductValues />
@@ -21,7 +19,7 @@ const Index = () => {
       <ProductCTA />
       <ProductSmokingHero />
       <Footer />
-    </React.Fragment>
+    </>
   );
 };
 
