@@ -4,7 +4,7 @@ import { APP_META_DATA } from '@/common/constants';
 import { CopyRight } from '@/components/ui/footer/CopyRight';
 
 const LINK_STYLE = { textDecoration: 'none' };
-export const Footer = () => {
+const Footer = () => {
   return (
     <Box>
       <Grid2 container mb={2} gap={8} display={'flex'} justifyContent={'center'}>
@@ -25,3 +25,4 @@ export const Footer = () => {
     </Box>
   );
 };
+export default Footer;

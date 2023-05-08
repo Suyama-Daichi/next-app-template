@@ -7,7 +7,7 @@ import ProductHowItWorks from '@/components/Home/elements/ProductHowItWorks';
 import ProductSmokingHero from '@/components/Home/elements/ProductSmokingHero';
 import ProductValues from '@/components/Home/elements/ProductValues';
 import AppAppBar from '@/components/shared/AppAppBar';
-import { Footer } from '@/components/ui/footer/Footer';
+import Footer from '@/components/ui/footer/Footer';
 import withRoot from '@/modules/withRoot';
 
 const Index = () => {

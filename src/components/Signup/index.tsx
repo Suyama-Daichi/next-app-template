@@ -11,7 +11,7 @@ import { ValidationError } from '@/components/Errors/Validation';
 import AppAppBar from '@/components/shared/AppAppBar';
 import AppForm from '@/components/shared/AppForm';
 import FormButton from '@/components/ui/FormButton';
-import { Footer } from '@/components/ui/footer/Footer';
+import Footer from '@/components/ui/footer/Footer';
 import withRoot from '@/modules/withRoot';
 
 const schema = z.object({

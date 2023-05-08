@@ -6,7 +6,7 @@ import Container from '@mui/material/Container';
 import AppAppBar from '@/components/shared/AppAppBar';
 import Markdown from '@/components/ui/Markdown';
 import Typography from '@/components/ui/Typography';
-import { Footer } from '@/components/ui/footer/Footer';
+import Footer from '@/components/ui/footer/Footer';
 import privacy from '@/markdown/privacy.md';
 import withRoot from '@/modules/withRoot';
 

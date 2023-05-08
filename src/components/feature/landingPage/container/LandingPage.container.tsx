@@ -1,10 +1,9 @@
-
 import { Box } from '@mui/material';
 
 import { APP_META_DATA } from '@/common/constants';
 import { HeroSection } from '@/components/feature/landingPage/container/presenter/HeroSection';
 import { MainSection } from '@/components/feature/landingPage/container/presenter/MainSection';
-import { Footer } from '@/components/ui/footer/Footer';
+import Footer from '@/components/ui/footer/Footer';
 import { Charts } from '@/components/ui/icon';
 
 const sections = [
