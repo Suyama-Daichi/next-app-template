@@ -17,13 +17,13 @@ export default function ProductHero() {
     >
       {/* Increase the network loading priority of the background image. */}
       <img style={{ display: 'none' }} src={backgroundImage} alt="increase priority" />
-      <Typography color="inherit" variant="h2" marked="center">
+      <Typography color="inherit" variant="h2">
         野球、見るならやる。
       </Typography>
       <Typography color="inherit" variant="h5" sx={{ mb: 4, mt: { xs: 4, sm: 10 } }}>
         この素晴らしきスポーツは、 やがてベースボールの一派として歴史にその名を刻むだろう。
       </Typography>
-      <Button color="secondary" variant="contained" size="large" component="a" href="/sign-up/" sx={{ minWidth: 200 }}>
+      <Button variant="contained" size="large" component="a" href="/sign-up/" sx={{ minWidth: 200 }}>
         新規チーム申請
       </Button>
     </ProductHeroLayout>

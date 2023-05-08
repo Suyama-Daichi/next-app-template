@@ -72,7 +72,6 @@ export default function ProductHeroLayout(props: React.HTMLAttributes<HTMLDivEle
             alignItems: 'center',
           }}
         >
-          <img src="/productHeroWonder.png" alt="wonder" width={'128px'} />
           {children}
           <BackGroundLayer />
           <Background sx={sxBackground} />
