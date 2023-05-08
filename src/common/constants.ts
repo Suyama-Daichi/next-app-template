@@ -1,6 +1,6 @@
 export const APP_META_DATA = {
-  siteName: 'サイト名',
-  siteDescription: ['サイトの説明文'],
+  siteName: 'JCBL公式サイト',
+  siteDescription: ['日本カラーボール野球リーグ(JCBL)の公式ホームページです'],
   owner: 'owner-name',
 };
 export const COLOR = {

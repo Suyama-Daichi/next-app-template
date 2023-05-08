@@ -4,7 +4,7 @@ import ProductHeroLayout from './ProductHeroLayout';
 
 import Typography from '@/components/ui/Typography';
 
-const backgroundImage = 'https://images.unsplash.com/photo-1534854638093-bada1813ca19?auto=format&fit=crop&w=1400';
+const backgroundImage = 'hero.jpg';
 
 export default function ProductHero() {
   return (
@@ -18,17 +18,14 @@ export default function ProductHero() {
       {/* Increase the network loading priority of the background image. */}
       <img style={{ display: 'none' }} src={backgroundImage} alt="increase priority" />
       <Typography color="inherit" variant="h2" marked="center">
-        Upgrade your Sundays
+        野球、見るならやる。
       </Typography>
       <Typography color="inherit" variant="h5" sx={{ mb: 4, mt: { xs: 4, sm: 10 } }}>
-        Enjoy secret offers up to -70% off the best luxury hotels every Sunday.
+        この素晴らしきスポーツは、 やがてベースボールの一派として歴史にその名を刻むだろう。
       </Typography>
       <Button color="secondary" variant="contained" size="large" component="a" href="/sign-up/" sx={{ minWidth: 200 }}>
-        Register
+        新規チーム申請
       </Button>
-      <Typography variant="body2" color="inherit" sx={{ mt: 2 }}>
-        Discover the experience
-      </Typography>
     </ProductHeroLayout>
   );
 }
