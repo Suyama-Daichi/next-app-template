@@ -75,7 +75,7 @@ const variantMapping = {
   subtitle1: 'h3',
 };
 type Props = TypographyProps & ExtraTypographyProps;
-export const Typography = styled((props: Props) => {
+const Typography = (props: Props) => {
   const { children, variant, marked = 'none', ...other } = props;
 
   let markedClassName = '';
@@ -89,4 +89,6 @@ export const Typography = styled((props: Props) => {
       {markedClassName ? <span className={markedClassName} /> : null}
     </MuiTypography>
   );
-})(styles);
+};
+
+export default styled(Typography)(styles);

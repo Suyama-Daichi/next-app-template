@@ -1,12 +1,12 @@
 import * as React from 'react';
 
-import { Typography } from '@mui/material';
 import Box from '@mui/material/Box';
 import Container from '@mui/material/Container';
 
+import Markdown from '@/components/ui/Markdown';
+import Typography from '@/components/ui/Typography';
 import { Footer } from '@/components/ui/footer/Footer';
 import terms from '@/markdown/terms.md';
-import Markdown from '@/modules/components/Markdown';
 import AppAppBar from '@/modules/views/AppAppBar';
 import withRoot from '@/modules/withRoot';
 

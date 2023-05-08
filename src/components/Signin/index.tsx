@@ -9,7 +9,7 @@ import { z } from 'zod';
 import { FORM_ERROR_MESSAGE } from '@/common/constants';
 import { ValidationError } from '@/components/Errors/Validation';
 import { Footer } from '@/components/ui/footer/Footer';
-import FormButton from '@/modules/form/FormButton';
+import FormButton from '@/components/ui/FormButton';
 import AppAppBar from '@/modules/views/AppAppBar';
 import AppForm from '@/modules/views/AppForm';
 import withRoot from '@/modules/withRoot';

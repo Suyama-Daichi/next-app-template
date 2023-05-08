@@ -2,7 +2,7 @@ import { Button } from '@mui/material';
 
 import ProductHeroLayout from './ProductHeroLayout';
 
-import { Typography } from '@/components/ui/Typography';
+import Typography from '@/components/ui/Typography';
 
 const backgroundImage = 'https://images.unsplash.com/photo-1534854638093-bada1813ca19?auto=format&fit=crop&w=1400';
 

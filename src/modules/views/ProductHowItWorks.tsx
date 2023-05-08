@@ -5,7 +5,7 @@ import Grid from '@mui/material/Grid';
 import { Theme } from '@mui/material/styles';
 import { SxProps } from '@mui/system';
 
-import { Typography } from '@/components/ui/Typography';
+import Typography from '@/components/ui/Typography';
 
 const item: SxProps<Theme> = {
   display: 'flex',

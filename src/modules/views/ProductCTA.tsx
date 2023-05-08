@@ -5,7 +5,7 @@ import Box from '@mui/material/Box';
 import Container from '@mui/material/Container';
 import Grid from '@mui/material/Grid';
 
-import Snackbar from '../components/Snackbar';
+import Snackbar from '@/components/ui/Snackbar';
 
 function ProductCTA() {
   const [open, setOpen] = React.useState(false);

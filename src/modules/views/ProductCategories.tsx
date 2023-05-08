@@ -1,9 +1,7 @@
-import Box from '@mui/material/Box';
-import ButtonBase from '@mui/material/ButtonBase';
-import Container from '@mui/material/Container';
+import { ButtonBase, Container, Box } from '@mui/material';
 import { styled } from '@mui/material/styles';
 
-import { Typography } from '@/components/ui/Typography';
+import Typography from '@/components/ui/Typography';
 
 const ImageBackdrop = styled('div')(({ theme }) => ({
   position: 'absolute',
