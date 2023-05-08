@@ -8,10 +8,10 @@ import { z } from 'zod';
 
 import { FORM_ERROR_MESSAGE } from '@/common/constants';
 import { ValidationError } from '@/components/Errors/Validation';
-import { Footer } from '@/components/ui/footer/Footer';
+import AppAppBar from '@/components/shared/AppAppBar';
+import AppForm from '@/components/shared/AppForm';
 import FormButton from '@/components/ui/FormButton';
-import AppAppBar from '@/modules/views/AppAppBar';
-import AppForm from '@/modules/views/AppForm';
+import { Footer } from '@/components/ui/footer/Footer';
 import withRoot from '@/modules/withRoot';
 
 const schema = z.object({

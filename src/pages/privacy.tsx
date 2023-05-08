@@ -3,11 +3,11 @@ import * as React from 'react';
 import Box from '@mui/material/Box';
 import Container from '@mui/material/Container';
 
+import AppAppBar from '@/components/shared/AppAppBar';
 import Markdown from '@/components/ui/Markdown';
 import Typography from '@/components/ui/Typography';
 import { Footer } from '@/components/ui/footer/Footer';
 import privacy from '@/markdown/privacy.md';
-import AppAppBar from '@/modules/views/AppAppBar';
 import withRoot from '@/modules/withRoot';
 
 function Privacy() {
