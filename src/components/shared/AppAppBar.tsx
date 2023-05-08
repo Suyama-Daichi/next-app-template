@@ -1,6 +1,7 @@
 import Box from '@mui/material/Box';
 import Link from '@mui/material/Link';
 
+import { APP_META_DATA } from '@/common/constants';
 import AppBar from '@/components/ui/AppBar';
 import Toolbar from '@/components/ui/Toolbar';
 
@@ -17,7 +18,7 @@ function AppAppBar() {
         <Toolbar sx={{ justifyContent: 'space-between' }}>
           <Box sx={{ flex: 1 }} />
           <Link variant="h6" underline="none" color="inherit" href="/" sx={{ fontSize: 24 }}>
-            {'onepirate'}
+            {APP_META_DATA.siteName}
           </Link>
           <Box sx={{ flex: 1, display: 'flex', justifyContent: 'flex-end' }}>
             <Link color="inherit" variant="h6" underline="none" href="/sign-in/" sx={rightLink}>
