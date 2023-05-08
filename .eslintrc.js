@@ -6,7 +6,7 @@ module.exports = {
     },
   },
   ignorePatterns: ['next-env.d.ts'],
-  plugins: ['@typescript-eslint', 'autofix'],
+  plugins: ['@typescript-eslint', 'unused-imports'],
   parserOptions: {
     ecmaVersion: 'latest',
     sourceType: 'module',
@@ -51,8 +51,9 @@ module.exports = {
     ],
     quotes: ['error', 'single', { avoidEscape: true }],
     '@typescript-eslint/no-unsafe-argument': 'warn',
-    '@typescript-eslint/no-unused-vars': 'off', // autofix/no-unused-varsとの干渉防止
-    'autofix/no-unused-vars': 'error',
     'import/named': 'off',
+    '@typescript-eslint/no-unused-vars': 'off',
+    'unused-imports/no-unused-imports': 'error',
+    'unused-imports/no-unused-vars': 'warn',
   },
 };
