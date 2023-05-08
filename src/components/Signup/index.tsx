@@ -31,7 +31,6 @@ const schema = z.object({
 type SchemaType = z.infer<typeof schema>;
 function Signup() {
   const [submitting, setSubmitting] = React.useState(false);
-  const [, setSent] = React.useState(false);
   const {
     handleSubmit,
     register,
@@ -43,7 +42,6 @@ function Signup() {
     setSubmitting(true);
     setTimeout(() => {
       setSubmitting(false);
-      setSent(true);
     }, 1000);
   };
 
