@@ -1,17 +1,17 @@
-import { green, grey, lightGreen, red } from '@mui/material/colors';
+import { green, grey, lightGreen, red, yellow } from '@mui/material/colors';
 import { createTheme } from '@mui/material/styles';
 
 const rawTheme = createTheme({
   palette: {
     primary: {
-      light: lightGreen[200],
-      main: lightGreen[700],
-      dark: lightGreen[900],
+      light: lightGreen[50],
+      main: lightGreen[500],
+      dark: lightGreen[700],
     },
     secondary: {
-      light: '#fff5f8',
-      main: '#ff3366',
-      dark: '#e62958',
+      light: yellow[50],
+      main: yellow[600],
+      dark: yellow[800],
     },
     warning: {
       main: '#ffc071',
@@ -86,6 +86,7 @@ const theme = {
       ...rawTheme.typography.h6,
       ...fontHeader,
       fontSize: 18,
+      fontWeight: rawTheme.typography.fontWeightLight,
     },
     subtitle1: {
       ...rawTheme.typography.subtitle1,

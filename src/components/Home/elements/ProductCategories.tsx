@@ -53,58 +53,55 @@ const ImageIconButton = styled(ButtonBase)(({ theme }) => ({
 
 const images = [
   {
-    url: 'https://images.unsplash.com/photo-1534081333815-ae5019106622?auto=format&fit=crop&w=400',
-    title: 'Snorkeling',
-    width: '40%',
+    url: 'https://images.unsplash.com/photo-1591453214154-c95db71dbd83?auto=format&fit=crop&w=400',
+    title: 'ごあいさつ',
+    width: '100%',
   },
   {
-    url: 'https://images.unsplash.com/photo-1531299204812-e6d44d9a185c?auto=format&fit=crop&w=400',
-    title: 'Massage',
-    width: '20%',
-  },
-  {
-    url: 'https://images.unsplash.com/photo-1476480862126-209bfaa8edc8?auto=format&fit=crop&w=400',
-    title: 'Hiking',
-    width: '40%',
+    url: 'https://images.unsplash.com/photo-1423592707957-3b212afa6733?auto=format&fit=crop&w=400',
+    title: 'ルールブック',
+    width: '25%',
   },
   {
     url: 'https://images.unsplash.com/photo-1453747063559-36695c8771bd?auto=format&fit=crop&w=400',
-    title: 'Tour',
-    width: '38%',
+    title: 'ギャラリー(旧スケッチブック)',
+    width: '50%',
   },
   {
-    url: 'https://images.unsplash.com/photo-1523309996740-d5315f9cc28b?auto=format&fit=crop&w=400',
-    title: 'Gastronomy',
-    width: '38%',
+    url: 'https://images.unsplash.com/photo-1599344941194-5eb5eaaaf73d?auto=format&fit=crop&w=400',
+    title: 'Q&A',
+    width: '25%',
   },
   {
-    url: 'https://images.unsplash.com/photo-1534452203293-494d7ddbf7e0?auto=format&fit=crop&w=400',
-    title: 'Shopping',
-    width: '24%',
+    url: 'https://images.unsplash.com/photo-1618438763526-8349557505a4?auto=format&fit=crop&w=400',
+    title: 'スコアボード',
+    width: '50%',
   },
   {
-    url: 'https://images.unsplash.com/photo-1506941433945-99a2aa4bd50a?auto=format&fit=crop&w=400',
-    title: 'Walking',
-    width: '40%',
+    url: 'https://images.unsplash.com/photo-1497633762265-9d179a990aa6?auto=format&fit=crop&w=400',
+    title: 'スタッツ(成績)',
+    width: '25%',
   },
   {
-    url: 'https://images.unsplash.com/photo-1533727937480-da3a97967e95?auto=format&fit=crop&w=400',
-    title: 'Fitness',
-    width: '20%',
+    url: 'https://pictogram2.com/p/p0602/6.png',
+    title: 'チーム紹介',
+    width: '25%',
+  },
+  {
+    url: 'https://images.unsplash.com/photo-1610850356560-b470d0825d2e?auto=format&fit=crop&w=400',
+    title: 'チーム申請',
+    width: '50%',
   },
   {
     url: 'https://images.unsplash.com/photo-1518136247453-74e7b5265980?auto=format&fit=crop&w=400',
-    title: 'Reading',
-    width: '40%',
+    title: 'リンク集',
+    width: '50%',
   },
 ];
 
 export default function ProductCategories() {
   return (
     <Container component="section" sx={{ my: 4 }}>
-      <Typography variant="h4" marked="center" align="center">
-        For all tastes and all desires
-      </Typography>
       <Box sx={{ mt: 4, display: 'flex', flexWrap: 'wrap' }}>
         {images.map((image) => (
           <ImageIconButton

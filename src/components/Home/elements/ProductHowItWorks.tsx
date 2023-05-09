@@ -50,15 +50,18 @@ function ProductHowItWorks() {
           }}
         />
         <Typography variant="h4" marked="center" sx={{ mb: 4 }}>
-          How it works
+          参加の流れ
         </Typography>
         <Grid container rowSpacing={5}>
           <Grid item xs={12} md={4}>
             <Box sx={item}>
               <Box sx={number}>1.</Box>
               <Box component="img" src="productHowItWorks1.svg" alt="suitcase" sx={image} />
-              <Typography variant="h5" align="center">
-                Appointment every Wednesday 9am.
+              <Typography variant="h6" align="center">
+                調整さんで人数が集まった日に
+              </Typography>
+              <Typography variant="h6" align="center">
+                開催されます。
               </Typography>
             </Box>
           </Grid>
@@ -66,8 +69,11 @@ function ProductHowItWorks() {
             <Box sx={item}>
               <Box sx={number}>2.</Box>
               <Box component="img" src="productHowItWorks2.svg" alt="graph" sx={image} />
-              <Typography variant="h5" align="center">
-                First come, first served. Our offers are in limited quantities, so be quick.
+              <Typography variant="h6" align="center">
+                場所は所沢航空記念公園が多いです。
+              </Typography>
+              <Typography variant="h6" align="center">
+                13:00に集合
               </Typography>
             </Box>
           </Grid>
@@ -75,15 +81,14 @@ function ProductHowItWorks() {
             <Box sx={item}>
               <Box sx={number}>3.</Box>
               <Box component="img" src="productHowItWorks3.svg" alt="clock" sx={image} />
-              <Typography variant="h5" align="center">
-                {'New offers every week. New experiences, new surprises. '}
-                {'Your Sundays will no longer be alike.'}
+              <Typography variant="h6" align="center">
+                グラウンドを作ったら試合開始！
               </Typography>
             </Box>
           </Grid>
         </Grid>
         <Button color="secondary" size="large" variant="contained" component="a" href="/sign-up/" sx={{ mt: 4 }}>
-          Get started
+          調整さんはこちら
         </Button>
       </Container>
     </Box>

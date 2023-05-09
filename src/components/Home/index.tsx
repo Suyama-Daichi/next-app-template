@@ -1,4 +1,3 @@
-import ProductCTA from '@/components/Home/elements/ProductCTA';
 import ProductCategories from '@/components/Home/elements/ProductCategories';
 import ProductHero from '@/components/Home/elements/ProductHero';
 import ProductHowItWorks from '@/components/Home/elements/ProductHowItWorks';
@@ -12,7 +11,6 @@ const Index = () => {
       <ProductHero />
       <ProductCategories />
       <ProductHowItWorks />
-      <ProductCTA />
       <ProductSmokingHero />
       <Footer />
     </>

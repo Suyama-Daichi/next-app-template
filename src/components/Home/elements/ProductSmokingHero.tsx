@@ -1,4 +1,4 @@
-import { Typography, Button, Container, Box } from '@mui/material';
+import { Button, Container } from '@mui/material';
 
 function ProductSmokingHero() {
   return (
@@ -12,14 +12,8 @@ function ProductSmokingHero() {
           px: 5,
         }}
       >
-        <Typography variant="h4" component="span">
-          Got any questions? Need help?
-        </Typography>
+        お問い合わせはこちら
       </Button>
-      <Typography variant="subtitle1" sx={{ my: 3 }}>
-        We are here to help. Get in touch!
-      </Typography>
-      <Box component="img" src="productBuoy.svg" alt="buoy" sx={{ width: 60 }} />
     </Container>
   );
 }
