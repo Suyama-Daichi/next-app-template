@@ -55,7 +55,7 @@ const ImageIconButton = styled(ButtonBase)(({ theme }) => ({
 const images = [
   {
     url: 'https://images.unsplash.com/photo-1591453214154-c95db71dbd83?auto=format&fit=crop&w=400',
-    title: 'ごあいさつ',
+    title: 'カラーボール野球とは',
     width: '100%',
     path: '/about',
   },
