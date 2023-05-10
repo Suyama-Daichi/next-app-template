@@ -15,6 +15,7 @@ const About = () => {
     <>
       <Head title="カラーボール野球とは" />
       <AppAppBar />
+      <Box my={4} />
       <Container maxWidth={'md'}>
         <Box>
           <Image
