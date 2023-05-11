@@ -3,8 +3,8 @@ import { useState } from 'react';
 import { Button, Menu, MenuItem } from '@mui/material';
 import Box from '@mui/material/Box';
 import Link from '@mui/material/Link';
+import { useRouter } from 'next/router';
 
-import { APP_META_DATA } from '@/common/constants';
 import AppBar from '@/components/ui/AppBar';
 import Toolbar from '@/components/ui/Toolbar';
 const rightLink = {
@@ -13,6 +13,7 @@ const rightLink = {
 };
 
 function AppAppBar() {
+  const router = useRouter();
   const [anchorEl, setAnchorEl] = useState<null | HTMLElement>(null);
 
   const handleMenu = (event: React.MouseEvent<HTMLElement>) => {
@@ -26,9 +27,13 @@ function AppAppBar() {
     <div>
       <AppBar position="fixed" sx={{ bgcolor: 'common.white' }}>
         <Toolbar sx={{ justifyContent: 'space-between' }}>
-          <Link variant="h6" underline="none" color="inherit" href="/" sx={{ fontSize: 24 }}>
-            {APP_META_DATA.siteName}
-          </Link>
+          <Box
+            component={'img'}
+            src="/jcbl-logo.png"
+            height={'70%'}
+            onClick={() => router.push('/')}
+            sx={{ cursor: 'pointer' }}
+          />
           <Box sx={{ flex: 1, display: 'flex', justifyContent: 'flex-end' }}>
             <Menu
               id="menu-app-bar"
