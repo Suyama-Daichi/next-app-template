@@ -1,17 +1,31 @@
-import { green, grey, lightGreen, red, yellow } from '@mui/material/colors';
+import { green, grey, lightGreen, red } from '@mui/material/colors';
 import { createTheme } from '@mui/material/styles';
 
+// PaletteOptions を拡張して、カラーキーワードを追加
+declare module '@mui/material/styles/createPalette' {
+  interface PaletteOptions {
+    backGround?: PaletteColorOptions;
+    primaryText?: PaletteColorOptions;
+  }
+}
+
+// Button の color prop に追加
+declare module '@mui/material/Button' {
+  interface ButtonPropsColorOverrides {
+    backGround: true;
+  }
+}
 const rawTheme = createTheme({
   palette: {
     primary: {
-      light: lightGreen[50],
+      light: '#B2D69A',
       main: lightGreen[500],
-      dark: lightGreen[700],
+      dark: '#5C7A4B',
     },
     secondary: {
-      light: yellow[50],
-      main: yellow[600],
-      dark: yellow[800],
+      light: '#4DA6BD',
+      main: '#20B2AA',
+      dark: '#009788',
     },
     warning: {
       main: '#ffc071',

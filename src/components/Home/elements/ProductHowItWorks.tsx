@@ -28,7 +28,7 @@ const image = {
 
 function ProductHowItWorks() {
   return (
-    <Box component="section" sx={{ display: 'flex', bgcolor: 'secondary.light', overflow: 'hidden' }}>
+    <Box component="section" sx={{ display: 'flex', overflow: 'hidden' }}>
       <Container
         sx={{
           my: 4,
@@ -87,7 +87,14 @@ function ProductHowItWorks() {
             </Box>
           </Grid>
         </Grid>
-        <Button color="secondary" size="large" variant="contained" component="a" href="/sign-up/" sx={{ mt: 4 }}>
+        <Button
+          color="secondary"
+          sx={{ color: 'white', mt: 4 }}
+          size="large"
+          variant="contained"
+          component="a"
+          href="/sign-up/"
+        >
           調整さんはこちら
         </Button>
       </Container>
