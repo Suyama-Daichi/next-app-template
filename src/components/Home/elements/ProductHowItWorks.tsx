@@ -93,7 +93,8 @@ function ProductHowItWorks() {
           size="large"
           variant="contained"
           component="a"
-          href="/sign-up/"
+          target="_blank"
+          href="https://chouseisan.com/s?h=bc11e83be098414fb2565e5b1be7a27c"
         >
           調整さんはこちら
         </Button>

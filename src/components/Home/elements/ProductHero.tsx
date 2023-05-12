@@ -23,7 +23,14 @@ export default function ProductHero() {
       <Typography color="inherit" variant="h5" sx={{ mb: 4, mt: { xs: 4, sm: 10 } }}>
         この素晴らしきスポーツは、 やがてベースボールの一派として歴史にその名を刻むだろう。
       </Typography>
-      <Button variant="contained" size="large" component="a" href="/sign-up/" sx={{ minWidth: 200 }}>
+      <Button
+        variant="contained"
+        size="large"
+        component="a"
+        target="_blank"
+        href="https://forms.gle/fuSMY4XLZns888YZ7"
+        sx={{ minWidth: 200 }}
+      >
         新規チーム申請
       </Button>
     </ProductHeroLayout>

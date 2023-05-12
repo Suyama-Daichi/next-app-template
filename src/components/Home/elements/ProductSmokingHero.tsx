@@ -11,6 +11,9 @@ function ProductSmokingHero() {
           py: 2,
           px: 5,
         }}
+        component={'a'}
+        target="_blank"
+        href="https://forms.gle/2xhQawkamff6dV1dA"
       >
         お問い合わせはこちら
       </Button>
