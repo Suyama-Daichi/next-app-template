@@ -9,7 +9,7 @@ const Footer = () => {
   const router = useRouter();
   return (
     <Box
-      height={'100px'}
+      height={'200px'}
       display={'flex'}
       flexDirection={'column'}
       justifyContent={'center'}
@@ -18,7 +18,7 @@ const Footer = () => {
     >
       <Box
         component={'img'}
-        width={'10%'}
+        height={'40%'}
         src="/jcbl-logo.png"
         onClick={() => router.push('/')}
         sx={{ cursor: 'pointer' }}
