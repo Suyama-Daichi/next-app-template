@@ -12,6 +12,12 @@ const rightLink = {
   ml: 3,
 };
 
+const MENU_LIST = [
+  { label: 'ホーム', link: '/' },
+  { label: 'カラーボール野球とは', link: '/about' },
+  { label: 'Q&A', link: '/faq' },
+];
+
 function AppAppBar() {
   const router = useRouter();
   const [anchorEl, setAnchorEl] = useState<null | HTMLElement>(null);
@@ -47,16 +53,13 @@ function AppAppBar() {
               onClose={handleClose}
               MenuListProps={{ onMouseLeave: handleClose }}
             >
-              <MenuItem>
-                <Link href="/" underline="none" width={'100%'}>
-                  ホーム
-                </Link>
-              </MenuItem>
-              <MenuItem>
-                <Link href="/about" underline="none" width={'100%'}>
-                  カラーボール野球とは
-                </Link>
-              </MenuItem>
+              {MENU_LIST.map((menu, i) => (
+                <MenuItem key={i}>
+                  <Link href={menu.link} underline="none" width={'100%'}>
+                    {menu.label}
+                  </Link>
+                </MenuItem>
+              ))}
             </Menu>
             <Button color="primary" sx={rightLink} onMouseOver={handleMenu}>
               メニュー
