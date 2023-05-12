@@ -16,6 +16,7 @@ const MENU_LIST = [
   { label: 'ホーム', link: '/' },
   { label: 'カラーボール野球とは', link: '/about' },
   { label: 'Q&A', link: '/faq' },
+  { label: 'ルールブック', link: '/rules' },
 ];
 
 function AppAppBar() {
