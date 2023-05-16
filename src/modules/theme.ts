@@ -28,7 +28,8 @@ const rawTheme = createTheme({
       dark: '#009788',
     },
     warning: {
-      main: '#ffc071',
+      light: '#ffc071',
+      main: '#ffb25e',
       dark: '#ffb25e',
     },
     error: {

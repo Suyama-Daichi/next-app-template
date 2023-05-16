@@ -1,6 +1,5 @@
 import { ExpandMore } from '@mui/icons-material';
-import { Accordion, AccordionDetails, AccordionSummary, Box, Container, Typography } from '@mui/material';
-import Link from 'next/link';
+import { Accordion, AccordionDetails, AccordionSummary, Box, Container, Link, Typography } from '@mui/material';
 
 import AppAppBar from '@/components/shared/AppAppBar';
 import Head from '@/components/shared/Head';
@@ -13,7 +12,7 @@ const FAQ_LIST = [
     q: '参加するにはどうすれば良いのですか？',
     a: (
       <>
-        <Link target="_blank" href={'https://forms.gle/fuSMY4XLZns888YZ7'}>
+        <Link underline="none" target="_blank" href={'https://forms.gle/fuSMY4XLZns888YZ7'}>
           こちら
         </Link>
         <Typography display={'inline-block'}>から申請してください</Typography>
@@ -24,7 +23,17 @@ const FAQ_LIST = [
     q: '加盟費・年会費等は必要ですか？',
     a: '無料です。連盟への支払いはありませんが、ボールやバットは各チーム側でご用意ください。',
   },
-  { q: 'ストライクゾーンが良く解らないのですが？', a: 'こちらのページを参照して下さい。「ストライクゾーンについて」' },
+  {
+    q: 'ストライクゾーンが良く解らないのですが？',
+    a: (
+      <>
+        <Typography display={'inline-block'}>こちらのページを参照してください。</Typography>{' '}
+        <Link underline="none" href={'/about/strike-zone'}>
+          「ストライクゾーンについて」
+        </Link>
+      </>
+    ),
+  },
   {
     q: '公式記録を残したいのですが？',
     a: '左側メニューバーの「スコアシート」からスコアシートをプリントアウトして記載して下さい。',
