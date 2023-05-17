@@ -1,4 +1,4 @@
-import { Box, Container, Divider, Grid } from '@mui/material';
+import { Alert, AlertTitle, Box, Container, Divider, Grid } from '@mui/material';
 
 import AppAppBar from '@/components/shared/AppAppBar';
 import Head from '@/components/shared/Head';
@@ -21,9 +21,10 @@ const StrikeZone = () => {
             という人も結構いると思いますので参考にしてください。
           </Typography>
           <Typography>図は一般的な野球のゾーンです。</Typography>
-          <Typography color={'warning.main'} fontWeight={'bold'}>
-            ※カラーボールのストライクゾーンはこれよりも甘めでお願いします。
-          </Typography>
+          <Typography color={'warning.main'} fontWeight={'bold'}></Typography>
+          <Alert severity="info">
+            <AlertTitle>※カラーボール野球のストライクゾーンはこれよりも甘めです。</AlertTitle>
+          </Alert>
         </Box>
         <Grid container display={'flex'} justifyContent={'center'} mb={1}>
           <Grid item sm={6} component={'img'} src="/jcbl-strike-zone-left.jpg" />

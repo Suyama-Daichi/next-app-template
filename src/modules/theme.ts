@@ -42,6 +42,11 @@ const rawTheme = createTheme({
       main: green[500],
       dark: green[700],
     },
+    info: {
+      light: '#4fc3f7',
+      main: '#29b6f6',
+      dark: '#0288d1',
+    },
   },
   typography: {
     fontFamily: "'Work Sans', sans-serif",
