@@ -13,6 +13,7 @@ import {
 
 import AppAppBar from '@/components/shared/AppAppBar';
 import Head from '@/components/shared/Head';
+import BackButton from '@/components/ui/BackButton';
 import Footer from '@/components/ui/footer/Footer';
 
 const TABLE_ELEMENT_LIST = [
@@ -70,6 +71,7 @@ const Rules = () => {
             </TableBody>
           </Table>
         </TableContainer>
+        <BackButton />
       </Container>
       <Footer />
     </>

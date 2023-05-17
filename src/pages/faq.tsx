@@ -12,6 +12,7 @@ import {
 
 import AppAppBar from '@/components/shared/AppAppBar';
 import Head from '@/components/shared/Head';
+import BackButton from '@/components/ui/BackButton';
 import Footer from '@/components/ui/footer/Footer';
 
 const FAQ_LIST = [
@@ -74,6 +75,7 @@ const FAQ = () => {
             </AccordionDetails>
           </Accordion>
         ))}
+        <BackButton />
       </Container>
       <Footer />
     </>

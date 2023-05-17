@@ -1,16 +1,14 @@
-import { KeyboardReturn } from '@mui/icons-material';
-import { Container, Divider, Box, Button } from '@mui/material';
+import { Container, Divider, Box } from '@mui/material';
 import { grey } from '@mui/material/colors';
 import Image from 'next/image';
-import { useRouter } from 'next/router';
 
 import AppAppBar from '@/components/shared/AppAppBar';
 import Head from '@/components/shared/Head';
+import BackButton from '@/components/ui/BackButton';
 import Typography from '@/components/ui/Typography';
 import Footer from '@/components/ui/footer/Footer';
 
 const About = () => {
-  const router = useRouter();
   return (
     <>
       <Head title="カラーボール野球とは" />
@@ -95,9 +93,7 @@ const About = () => {
           </Typography>
         </Box>
         <Divider sx={{ my: 2 }} />
-        <Button onClick={() => router.back()}>
-          <KeyboardReturn sx={{ mr: 1 }} /> 戻る
-        </Button>
+        <BackButton />
       </Container>
       <Footer />
     </>
