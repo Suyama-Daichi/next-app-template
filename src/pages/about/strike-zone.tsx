@@ -2,6 +2,7 @@ import { Alert, AlertTitle, Box, Container, Divider, Grid } from '@mui/material'
 
 import AppAppBar from '@/components/shared/AppAppBar';
 import Head from '@/components/shared/Head';
+import ImageWithCaption from '@/components/ui/ImageWithCaption';
 import Typography from '@/components/ui/Typography';
 import Footer from '@/components/ui/footer/Footer';
 
@@ -27,8 +28,12 @@ const StrikeZone = () => {
           </Alert>
         </Box>
         <Grid container display={'flex'} justifyContent={'center'} mb={1}>
-          <Grid item sm={6} component={'img'} src="/jcbl-strike-zone-left.jpg" />
-          <Grid item sm={6} component={'img'} src="/jcbl-strike-zone-right.jpg" />
+          <Grid item sm={6}>
+            <ImageWithCaption caption="左打者" src="/jcbl-strike-zone-left.jpg" />
+          </Grid>
+          <Grid item sm={6}>
+            <ImageWithCaption caption="右打者" src="/jcbl-strike-zone-right.jpg" />
+          </Grid>
         </Grid>
       </Container>
       <Footer />
