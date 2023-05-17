@@ -73,7 +73,7 @@ const images = [
   },
   {
     url: 'https://images.unsplash.com/photo-1599344941194-5eb5eaaaf73d?auto=format&fit=crop&w=400',
-    title: 'Q&A',
+    title: 'よくある質問',
     width: '25%',
     path: '/faq',
   },

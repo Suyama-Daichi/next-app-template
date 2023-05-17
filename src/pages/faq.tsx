@@ -1,5 +1,14 @@
 import { ExpandMore } from '@mui/icons-material';
-import { Accordion, AccordionDetails, AccordionSummary, Box, Container, Link, Typography } from '@mui/material';
+import {
+  Accordion,
+  AccordionDetails,
+  AccordionSummary,
+  Box,
+  Container,
+  Divider,
+  Link,
+  Typography,
+} from '@mui/material';
 
 import AppAppBar from '@/components/shared/AppAppBar';
 import Head from '@/components/shared/Head';
@@ -43,10 +52,14 @@ const FAQ_LIST = [
 const FAQ = () => {
   return (
     <>
-      <Head title="Q&A" />
+      <Head title="よくある質問" />
       <AppAppBar />
       <Box my={4} />
       <Container maxWidth={'md'}>
+        <Typography variant="h4" align="center">
+          よくある質問
+        </Typography>
+        <Divider sx={{ my: 2 }} />
         {FAQ_LIST.map((faq, i) => (
           <Accordion key={i}>
             <AccordionSummary expandIcon={<ExpandMore />} aria-controls="panel1a-content" id="panel1a-header">

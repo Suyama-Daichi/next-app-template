@@ -15,8 +15,11 @@ const About = () => {
     <>
       <Head title="カラーボール野球とは" />
       <AppAppBar />
-      <Box my={4} />
       <Container maxWidth={'md'}>
+        <Typography variant="h4" align="center">
+          ようこそ、カラーボール野球へ
+        </Typography>
+        <Divider sx={{ my: 2 }} />
         <Box>
           <Image
             src="/hero.jpg"
