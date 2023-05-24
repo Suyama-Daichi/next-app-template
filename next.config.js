@@ -1,5 +1,6 @@
 /** @type {import('next').NextConfig} */
 const nextConfig = {
+  transpilePackages: ['@amcharts/amcharts5', '@amcharts/amcharts5-geodata'],
   reactStrictMode: true,
   webpack: (config) => {
     config.module.rules.push({
