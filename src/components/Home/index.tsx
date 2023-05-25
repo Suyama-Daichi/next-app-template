@@ -1,26 +1,16 @@
-import ProductCTA from '@/components/Home/elements/ProductCTA';
-import ProductCategories from '@/components/Home/elements/ProductCategories';
-import ProductHero from '@/components/Home/elements/ProductHero';
-import ProductHowItWorks from '@/components/Home/elements/ProductHowItWorks';
-import ProductSmokingHero from '@/components/Home/elements/ProductSmokingHero';
-import ProductValues from '@/components/Home/elements/ProductValues';
+import { CityMap } from '@/components/CityMap';
+import { StaticProps } from '@/components/Home/type';
 import AppAppBar from '@/components/shared/AppAppBar';
 import Footer from '@/components/ui/footer/Footer';
-import withRoot from '@/modules/withRoot';
 
-const Index = () => {
+const Home = (props: StaticProps) => {
   return (
     <>
       <AppAppBar />
-      <ProductHero />
-      <ProductValues />
-      <ProductCategories />
-      <ProductHowItWorks />
-      <ProductCTA />
-      <ProductSmokingHero />
+      <CityMap {...props} />
       <Footer />
     </>
   );
 };
 
-export const HomeContainer = withRoot(Index);
+export const HomeContainer = Home;
