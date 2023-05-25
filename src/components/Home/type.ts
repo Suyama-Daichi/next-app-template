@@ -1,6 +1,7 @@
-import { GeoJsonData } from '@/components/CityMap/city.type';
+import { GeoJsonDataCity } from '@/components/CityMap/city.type';
+import { GeoJsonDataPrefecture } from '@/components/CityMap/prefecture.type';
 
 export type StaticProps = {
-  jpCities: GeoJsonData;
-  jpPrefectures: GeoJsonData;
+  jpCities: GeoJsonDataCity;
+  jpPrefectures: GeoJsonDataPrefecture;
 };
