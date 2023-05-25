@@ -1,4 +1,4 @@
-import { useLayoutEffect } from 'react';
+import { useLayoutEffect, useRef } from 'react';
 
 import * as am5 from '@amcharts/amcharts5';
 import * as am5map from '@amcharts/amcharts5/map';
@@ -8,9 +8,11 @@ import { GeoJsonDataPrefecture } from '@/components/CityMap/prefecture.type';
 import { StaticProps } from '@/components/Home/type';
 
 export const CityMap = ({ jpCities, jpPrefectures }: Pick<StaticProps, 'jpCities' | 'jpPrefectures'>) => {
+  const ref = useRef(null);
   useLayoutEffect(() => {
+    if (!ref.current) return;
     // 描画領域の要素を取得
-    const root = am5.Root.new('chartdiv');
+    const root = am5.Root.new(ref.current);
     // テーマを設定
     const colors = am5.ColorSet.new(root, {});
     root.setThemes([am5themes_Animated.new(root)]);
@@ -99,12 +101,12 @@ export const CityMap = ({ jpCities, jpPrefectures }: Pick<StaticProps, 'jpCities
       jpCitySeries.hide();
       backContainer.hide();
     });
-    // Add cursor
+    // ズームコントロール
     chart.set('zoomControl', am5map.ZoomControl.new(root, {}));
     return () => {
       root.dispose();
     };
   }, [jpCities, jpPrefectures]);
 
-  return <div id="chartdiv" style={{ width: '100%', height: '750px' }}></div>;
+  return <div ref={ref} style={{ width: '100%', height: '750px' }}></div>;
 };
