@@ -34,11 +34,9 @@ export const CityMap = ({ jpCities, jpPrefectures }: Pick<StaticProps, 'jpCities
       fill: am5.color(0xaaaaaa),
       templateField: 'polygonSettings',
     });
-    // マウスホバー時の処理
     jpPrefectureSeries.mapPolygons.template.states.create('hover', {
       fill: colors.getIndex(9),
     });
-    // 都道府県クリック時の処理
     jpPrefectureSeries.mapPolygons.template.events.on('click', async function (ev) {
       const dataItem = ev.target.dataItem;
       const data = dataItem?.dataContext as GeoJsonDataPrefecture['features'][0]['properties'];
@@ -53,8 +51,9 @@ export const CityMap = ({ jpCities, jpPrefectures }: Pick<StaticProps, 'jpCities
 
       jpPrefectureSeries.hide(150);
       jpCitySeries.show();
+      backContainer.show();
     });
-
+    // 都道府県レベルマップ
     const jpCitySeries = chart.series.push(
       am5map.MapPolygonSeries.new(root, {
         visible: false,
@@ -68,10 +67,38 @@ export const CityMap = ({ jpCities, jpPrefectures }: Pick<StaticProps, 'jpCities
     jpCitySeries.mapPolygons.template.states.create('hover', {
       fill: colors.getIndex(9),
     });
-    // Add legend
-    const legend = chart.children.push(am5.Legend.new(root, {}));
-    legend.data.setAll(chart.series.values);
-
+    // 拡大率リセットボタン
+    const backContainer = chart.children.push(
+      am5.Container.new(root, {
+        x: am5.p100,
+        centerX: am5.p100,
+        dx: -10,
+        paddingTop: 5,
+        paddingRight: 10,
+        paddingBottom: 5,
+        y: 30,
+        interactiveChildren: false,
+        layout: root.horizontalLayout,
+        cursorOverStyle: 'pointer',
+        background: am5.RoundedRectangle.new(root, {
+          fill: am5.color(0xffffff),
+          fillOpacity: 0.2,
+        }),
+        visible: false,
+      }),
+    );
+    backContainer.children.push(
+      am5.Label.new(root, {
+        text: '戻る',
+        centerY: am5.p50,
+      }),
+    );
+    backContainer.events.on('click', function () {
+      chart.goHome();
+      jpPrefectureSeries.show();
+      jpCitySeries.hide();
+      backContainer.hide();
+    });
     // Add cursor
     chart.set('zoomControl', am5map.ZoomControl.new(root, {}));
     return () => {
