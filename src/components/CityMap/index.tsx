@@ -4,10 +4,19 @@ import * as am5 from '@amcharts/amcharts5';
 import * as am5map from '@amcharts/amcharts5/map';
 import am5themes_Animated from '@amcharts/amcharts5/themes/Animated';
 
+import { HEATMAP_COLOR_MAP } from '@/components/CityMap/constant';
+import { PrefHeatMap as PrefHeatMap } from '@/components/CityMap/heatmap.type';
 import { GeoJsonDataPrefecture } from '@/components/CityMap/prefecture.type';
 import { StaticProps } from '@/components/Home/type';
 
-export const CityMap = ({ jpCities, jpPrefectures }: Pick<StaticProps, 'jpCities' | 'jpPrefectures'>) => {
+type Props = {
+  prefHeatmap: PrefHeatMap[];
+};
+export const CityMap = ({
+  jpCities,
+  jpPrefectures,
+  prefHeatmap,
+}: Props & Pick<StaticProps, 'jpCities' | 'jpPrefectures'>) => {
   const ref = useRef(null);
   useLayoutEffect(() => {
     if (!ref.current) return;
@@ -28,10 +37,12 @@ export const CityMap = ({ jpCities, jpPrefectures }: Pick<StaticProps, 'jpCities
     const jpPrefectureSeries = chart.series.push(
       am5map.MapPolygonSeries.new(root, {
         geoJSON: jpPrefectures,
+        valueField: 'value',
+        calculateAggregates: true,
       }),
     );
     jpPrefectureSeries.mapPolygons.template.setAll({
-      tooltipText: '{name}',
+      tooltipText: '{name}: {value}',
       interactive: true,
       fill: am5.color(0xaaaaaa),
       templateField: 'polygonSettings',
@@ -55,7 +66,26 @@ export const CityMap = ({ jpCities, jpPrefectures }: Pick<StaticProps, 'jpCities
       jpCitySeries.show();
       backContainer.show();
     });
-    // 都道府県レベルマップ
+    jpPrefectureSeries.set('heatRules', [
+      {
+        target: jpPrefectureSeries.mapPolygons.template,
+        dataField: 'value',
+        customFunction: function (sprite, min, max, value) {
+          if (value > 1000) {
+            sprite.set('fill', am5.color(HEATMAP_COLOR_MAP.red));
+          } else if (value > 100) {
+            sprite.set('fill', am5.color(HEATMAP_COLOR_MAP.orange));
+          } else if (value > 50) {
+            sprite.set('fill', am5.color(HEATMAP_COLOR_MAP.yellow));
+          } else if (value >= 1) {
+            sprite.set('fill', am5.color(HEATMAP_COLOR_MAP.green));
+          }
+        },
+        key: 'fill',
+      },
+    ]);
+    jpPrefectureSeries.data.setAll(prefHeatmap);
+    // 市区町村レベルマップ
     const jpCitySeries = chart.series.push(
       am5map.MapPolygonSeries.new(root, {
         visible: false,
@@ -106,7 +136,7 @@ export const CityMap = ({ jpCities, jpPrefectures }: Pick<StaticProps, 'jpCities
     return () => {
       root.dispose();
     };
-  }, [jpCities, jpPrefectures]);
+  }, [jpCities, jpPrefectures, prefHeatmap]);
 
   return <div ref={ref} style={{ width: '100%', height: '750px' }}></div>;
 };
