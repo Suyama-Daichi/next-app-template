@@ -27,3 +27,7 @@ export const FORM_ERROR_MESSAGE = {
   INVALID_PASSWORD: 'パスワードは半角英数大文字小文字を含む8文字以上で入力してください',
   REQUIRED: '入力してください',
 };
+
+export const FOURSQUARE_BACKEND = 'https://api.foursquare.com' as const;
+
+export const FOURSQUARE_AUTH_URL = `https://foursquare.com/oauth2/authenticate?client_id=${process.env.NEXT_PUBLIC_CLIENT_ID}&response_type=code&redirect_uri=${process.env.NEXT_PUBLIC_REDIRECT_URI}`;
