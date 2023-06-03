@@ -15,6 +15,7 @@ const useFetchUserCheckins = () => {
   const swr = useSWR<FoursquareResponse<Checkins>>(
     !accessToken ? null : `${FOURSQUARE_BACKEND}/v2/users/self/checkins?${queryString}`,
     fetcher,
+    { revalidateOnFocus: false },
   );
   return { ...swr, data: swr.data?.response.checkins, isLoading: swr.isLoading || swr.isValidating };
 };
