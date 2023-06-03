@@ -17,6 +17,8 @@ const Home = (props: StaticProps) => {
 
   if (!isAuth) return <Link href={FOURSQUARE_AUTH_URL}>ログインすると訪れたエリアが塗られます</Link>;
 
+  console.log(isAuth);
+
   return (
     <>
       <AppAppBar />
