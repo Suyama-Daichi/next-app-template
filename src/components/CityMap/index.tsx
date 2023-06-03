@@ -36,7 +36,7 @@ export const CityMap = ({
     // 都道府県レベルマップ
     const jpPrefectureSeries = chart.series.push(
       am5map.MapPolygonSeries.new(root, {
-        geoJSON: jpPrefectures,
+        geoJSON: jpPrefectures as any,
         valueField: 'value',
         calculateAggregates: true,
       }),
@@ -53,12 +53,12 @@ export const CityMap = ({
     jpPrefectureSeries.mapPolygons.template.events.on('click', async function (ev) {
       const dataItem = ev.target.dataItem;
       const data = dataItem?.dataContext as GeoJsonDataPrefecture['features'][0]['properties'];
-      const zoomAnimation = jpPrefectureSeries.zoomToDataItem(dataItem);
+      const zoomAnimation = jpPrefectureSeries.zoomToDataItem(dataItem as any);
       await zoomAnimation?.waitForStop();
       const citiesInSelectedPrefecture = jpCities.features.filter((feature) => feature.properties.KEN === data.name);
       const jpCityGeoJSON = { ...jpCities, features: citiesInSelectedPrefecture };
       jpCitySeries.setAll({
-        geoJSON: jpCityGeoJSON,
+        geoJSON: jpCityGeoJSON as any,
         fill: am5.color(0xaaaaaa),
       });
 
@@ -71,14 +71,15 @@ export const CityMap = ({
         target: jpPrefectureSeries.mapPolygons.template,
         dataField: 'value',
         customFunction: function (sprite, min, max, value) {
+          const spriteAsGraphic = sprite as am5.Graphics;
           if (value > 1000) {
-            sprite.set('fill', am5.color(HEATMAP_COLOR_MAP.red));
+            spriteAsGraphic.set('fill', am5.color(HEATMAP_COLOR_MAP.red));
           } else if (value > 100) {
-            sprite.set('fill', am5.color(HEATMAP_COLOR_MAP.orange));
+            spriteAsGraphic.set('fill', am5.color(HEATMAP_COLOR_MAP.orange));
           } else if (value > 50) {
-            sprite.set('fill', am5.color(HEATMAP_COLOR_MAP.yellow));
+            spriteAsGraphic.set('fill', am5.color(HEATMAP_COLOR_MAP.yellow));
           } else if (value >= 1) {
-            sprite.set('fill', am5.color(HEATMAP_COLOR_MAP.green));
+            spriteAsGraphic.set('fill', am5.color(HEATMAP_COLOR_MAP.green));
           }
         },
         key: 'fill',
