@@ -1,6 +1,5 @@
 import { useEffect, useState } from 'react';
 
-import { Button } from '@mui/material';
 import Link from 'next/link';
 import { useRecoilValue } from 'recoil';
 
@@ -51,17 +50,6 @@ const Home = (props: StaticProps) => {
     <>
       <AppAppBar />
       <CityMap prefHeatmap={countWithPref} {...props} />
-      <Button
-        onClick={() =>
-          setCountWithPref([
-            { id: 3, value: 12345 },
-            { id: 12, value: 1 },
-            { id: 42, value: 90 },
-          ])
-        }
-      >
-        更新
-      </Button>
       <Footer />
     </>
   );
