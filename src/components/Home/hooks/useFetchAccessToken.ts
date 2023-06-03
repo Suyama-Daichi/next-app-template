@@ -1,7 +1,7 @@
 import useSWR from 'swr';
 
 import { fetcher } from '@/common/fetcher';
-import { ACCESS_TOKEN_RESPONSE } from '@/common/type';
+import { ACCESS_TOKEN_RESPONSE } from '@/common/types';
 import { makeQueryString } from '@/common/utils';
 
 const useFetchAccessToken = (code?: string) => {

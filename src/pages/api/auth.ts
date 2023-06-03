@@ -4,7 +4,7 @@ import axios from 'axios';
 import type { NextApiRequest, NextApiResponse } from 'next';
 
 import { FOURSQUARE_BACKEND } from '@/common/constants';
-import { ACCESS_TOKEN_RESPONSE } from '@/common/type';
+import { ACCESS_TOKEN_RESPONSE } from '@/common/types';
 import { makeQueryString } from '@/common/utils';
 
 export default async function handler(req: NextApiRequest, res: NextApiResponse<ACCESS_TOKEN_RESPONSE>) {
